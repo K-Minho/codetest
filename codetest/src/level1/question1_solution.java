@@ -49,6 +49,7 @@ class Solution {
             // System.out.println(textAlphaIdx.get(i));
         }
 
+        // 알파벳 번호 스킵
         List<Integer> answerIdx = new ArrayList<>();
         for (int i = 0; i < textAlphaIdx.size(); i++) {
             int idx = textAlphaIdx.get(i);
@@ -64,11 +65,13 @@ class Solution {
             answerIdx.add(idx);
         }
 
+        // 스킵 적용 후 숫자를 알파벳으로 변환
         List<String> answerAlpha = new ArrayList<>();
         for (int i = 0; i < answerIdx.size(); i++) {
             answerAlpha.add(alpha[answerIdx.get(i)]);
         }
 
+        // 결과문 출력
         String answer = "";
         for (int i = 0; i < answerAlpha.size(); i++) {
             answer = answer + answerAlpha.get(i);
